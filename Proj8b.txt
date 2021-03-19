@@ -1,0 +1,18 @@
+#Author: Ashley Johnson
+#Date: 11/17/2020
+#Description: Program takes 2 strings as parameters and returns a set of words contained
+# in both strings.
+
+def words_in_both(string1, string2):
+    """function takes 2 strings as a parameter and returns a set of words contained
+    in both strings"""
+    string1_words = [word.lower() for word in string1.split()]
+    string2_words = [word.lower() for word in string2.split()]
+
+    string1_set = set(string1_words)
+    string2_set = set(string2_words)
+    common = set()
+    for word in string1_set & string2_set:
+        common.add(word)
+    return common
+
